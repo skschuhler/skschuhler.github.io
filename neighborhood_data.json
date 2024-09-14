@@ -25,18 +25,18 @@
         "region": "Southwest Side"
     },
     {
-        "neighborhood": "Armour Sqaure",
-        "community_area": "Armour Square",
+        "neighborhood": "Armour Square",
+        "community_area": "Armour Sqaure",
         "region": "South Side"
     },
     {
         "neighborhood": "Chinatown",
-        "community_area": "Armour Square",
+        "community_area": "Armour Sqaure",
         "region": "South Side"
     },
     {
         "neighborhood": "Wentworth Gardens",
-        "community_area": "Armour Square",
+        "community_area": "Armour Sqaure",
         "region": "South Side"
     },
     {
@@ -85,12 +85,7 @@
         "region": "Far Southwest Side"
     },
     {
-        "neighborhood": "North Austin",
-        "community_area": "Austin",
-        "region": "West Side"
-    },
-    {
-        "neighborhood": "South Austin",
+        "neighborhood": "Austin",
         "community_area": "Austin",
         "region": "West Side"
     },
@@ -100,7 +95,7 @@
         "region": "West Side"
     },
     {
-        "neighborhood": "Galewood ",
+        "neighborhood": "Galewood",
         "community_area": "Austin ",
         "region": "West Side"
     },
@@ -166,16 +161,16 @@
     },
     {
         "neighborhood": "Brickyard",
-        "community_area": "Belmont Craigin",
+        "community_area": "Belmont Cragin",
         "region": "Northwest Side"
     },
     {
-        "neighborhood": "East Beverly",
-        "community_area": "Beverly",
-        "region": "Far Southwest Side"
+        "neighborhood": "Belmont Cragin",
+        "community_area": "Belmont Cragin",
+        "region": "Northwest Side"
     },
     {
-        "neighborhood": "West Beverly",
+        "neighborhood": "Beverly",
         "community_area": "Beverly",
         "region": "Far Southwest Side"
     },
@@ -235,17 +230,17 @@
         "region": "Southwest Side"
     },
     {
+        "neighborhood": "Chicago Lawn",
+        "community_area": "Chicago Lawn",
+        "region": "Southwest Side"
+    },
+    {
         "neighborhood": "Chrysler Village",
         "community_area": "Clearing",
         "region": "Southwest Side"
     },
     {
-        "neighborhood": "Clearing East",
-        "community_area": "Clearing",
-        "region": "Southwest Side"
-    },
-    {
-        "neighborhood": "Clearing West",
+        "neighborhood": "Clearing",
         "community_area": "Clearing",
         "region": "Southwest Side"
     },
@@ -290,6 +285,11 @@
         "region": "South Side"
     },
     {
+        "neighborhood": "Douglas",
+        "community_area": "Douglas",
+        "region": "South Side"
+    },
+    {
         "neighborhood": "Belmont Heights",
         "community_area": "Dunning",
         "region": "Northwest Side"
@@ -313,16 +313,6 @@
         "neighborhood": "Schorsch Village",
         "community_area": "Dunning",
         "region": "Northwest Side"
-    },
-    {
-        "neighborhood": "East Garfield Park",
-        "community_area": "East Garfield Park",
-        "region": "West Side"
-    },
-    {
-        "neighborhood": "Fifth City",
-        "community_area": "East Garfield Park",
-        "region": "West Side"
     },
     {
         "neighborhood": "East Side",
@@ -375,11 +365,6 @@
         "region": "Far North Side"
     },
     {
-        "neighborhood": "Forest Glen",
-        "community_area": "Forest Glen",
-        "region": "Far North Side"
-    },
-    {
         "neighborhood": "Old Edgebrook",
         "community_area": "Forest Glen",
         "region": "Far North Side"
@@ -390,7 +375,7 @@
         "region": "Far North Side"
     },
     {
-        "neighborhood": "Suaganash",
+        "neighborhood": "Sauganash,Forest Glen",
         "community_area": "Forest Glen",
         "region": "Far North Side"
     },
@@ -428,6 +413,11 @@
         "neighborhood": "Vittum Park",
         "community_area": "Garfield Ridge",
         "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Garfield Park",
+        "community_area": "Garfield Park",
+        "region": "West Side"
     },
     {
         "neighborhood": "Grand Boulevard",
@@ -525,7 +515,7 @@
         "region": "Far North Side"
     },
     {
-        "neighborhood": "Kenwood ",
+        "neighborhood": "Kenwood",
         "community_area": "Kenwood",
         "region": "South Side"
     },
@@ -550,7 +540,7 @@
         "region": "North Side"
     },
     {
-        "neighborhood": "Northalsted \"Boystown\"",
+        "neighborhood": "Boystown",
         "community_area": "Lake View",
         "region": "North Side"
     },
@@ -590,17 +580,12 @@
         "region": "North Side"
     },
     {
-        "neighborhood": "Sheffield Neighbors",
-        "community_area": "Lincoln Park",
-        "region": "North Side"
-    },
-    {
-        "neighborhood": "West DePaul",
-        "community_area": "Lincoln Park",
-        "region": "North Side"
-    },
-    {
         "neighborhood": "Wrightwood Neighbors",
+        "community_area": "Lincoln Park",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Sheffield & DePaul",
         "community_area": "Lincoln Park",
         "region": "North Side"
     },
@@ -655,6 +640,31 @@
         "region": "North Side, West Side"
     },
     {
+        "neighborhood": "New Eastside",
+        "community_area": "Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Printers Row",
+        "community_area": "Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "South Loop",
+        "community_area": "Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Loop",
+        "community_area": "Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Dearborn Park",
+        "community_area": "Loop, Near South Side",
+        "region": "Central"
+    },
+    {
         "neighborhood": "East Pilsen",
         "community_area": "Lower West Side",
         "region": "West Side"
@@ -675,12 +685,12 @@
         "region": "West Side"
     },
     {
-        "neighborhood": "McKinley Park",
-        "community_area": "McKinley Park",
+        "neighborhood": "Mckinley Park",
+        "community_area": "Mckinley Park",
         "region": "Southwest Side"
     },
     {
-        "neighborhood": "Montclare ",
+        "neighborhood": "Montclare",
         "community_area": "Montclare",
         "region": "Northwest Side"
     },
@@ -770,6 +780,11 @@
         "region": "Central"
     },
     {
+        "neighborhood": "Near South Side",
+        "community_area": "Near South Side",
+        "region": "Central"
+    },
+    {
         "neighborhood": "Fulton River District",
         "community_area": "Near West Side",
         "region": "West Side"
@@ -785,7 +800,7 @@
         "region": "West Side"
     },
     {
-        "neighborhood": "Little Italy",
+        "neighborhood": "Little Italy, UIC",
         "community_area": "Near West Side",
         "region": "West Side"
     },
@@ -796,11 +811,6 @@
     },
     {
         "neighborhood": "Tri-Taylor",
-        "community_area": "Near West Side",
-        "region": "West Side"
-    },
-    {
-        "neighborhood": "University Village",
         "community_area": "Near West Side",
         "region": "West Side"
     },
@@ -880,12 +890,7 @@
         "region": "Far North Side"
     },
     {
-        "neighborhood": "Norwood Park East",
-        "community_area": "Norwood Park",
-        "region": "Far North Side"
-    },
-    {
-        "neighborhood": "Norwood Park West",
+        "neighborhood": "Norwood Park",
         "community_area": "Norwood Park",
         "region": "Far North Side"
     },
@@ -1015,7 +1020,7 @@
         "region": "West Side"
     },
     {
-        "neighborhood": "Jackson Park Highlands",
+        "neighborhood": "Jackson Park",
         "community_area": "South Shore",
         "region": "South Side"
     },
@@ -1023,31 +1028,6 @@
         "neighborhood": "South Shore",
         "community_area": "South Shore",
         "region": "South Side"
-    },
-    {
-        "neighborhood": "New Eastside",
-        "community_area": "The Loop",
-        "region": "Central"
-    },
-    {
-        "neighborhood": "Printer's Row",
-        "community_area": "The Loop",
-        "region": "Central"
-    },
-    {
-        "neighborhood": "South Loop",
-        "community_area": "The Loop",
-        "region": "Central"
-    },
-    {
-        "neighborhood": "The Loop",
-        "community_area": "The Loop",
-        "region": "Central"
-    },
-    {
-        "neighborhood": "Dearborn Park",
-        "community_area": "The Loop, Near South Side",
-        "region": "Central"
     },
     {
         "neighborhood": "Buena Park",
@@ -1108,11 +1088,6 @@
         "neighborhood": "West Englewood",
         "community_area": "West Englewood",
         "region": "Southwest Side"
-    },
-    {
-        "neighborhood": "West Garfield Park",
-        "community_area": "West Garfield Park",
-        "region": "West Side"
     },
     {
         "neighborhood": "Ford City",
@@ -1208,5 +1183,25 @@
         "neighborhood": "Woodlawn",
         "community_area": "Woodlawn",
         "region": "South Side"
+    },
+    {
+        "neighborhood": "United Center",
+        "community_area": "Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Grant Park",
+        "community_area": "Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Rush & Division",
+        "community_area": "Rush & Division",
+        "region": "Near North Side"
+    },
+    {
+        "neighborhood": "Millenium Park",
+        "community_area": "Loop",
+        "region": "Central"
     }
 ]
