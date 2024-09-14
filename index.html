@@ -57,12 +57,12 @@
             </select>
 
             <div class="filter-heading">Filter by Community Area:</div>
-            <select id="communityFilter" disabled>
+            <select id="communityFilter">
                 <option value="">Select Community Area</option>
             </select>
 
             <div class="filter-heading">Filter by Neighborhood:</div>
-            <select id="neighborhoodFilter" disabled>
+            <select id="neighborhoodFilter">
                 <option value="">Select Neighborhood</option>
             </select>
         </div>
@@ -158,8 +158,13 @@
         // Populate the dropdowns based on the GeoJSON data
         function populateDropdowns() {
             const regions = new Set();
+            const communities = new Set();
+            const neighborhoods = new Set();
+
             geojsonData.features.forEach(feature => {
                 regions.add(feature.properties.region);
+                communities.add(feature.properties.community_area);
+                neighborhoods.add(feature.properties.neighborhood);
             });
 
             // Populate region filter
@@ -169,6 +174,22 @@
                 option.textContent = region;
                 regionFilter.appendChild(option);
             });
+
+            // Populate community area filter
+            communities.forEach(community => {
+                const option = document.createElement('option');
+                option.value = community;
+                option.textContent = community;
+                communityFilter.appendChild(option);
+            });
+
+            // Populate neighborhood filter
+            neighborhoods.forEach(neighborhood => {
+                const option = document.createElement('option');
+                option.value = neighborhood;
+                option.textContent = neighborhood;
+                neighborhoodFilter.appendChild(option);
+            });
         }
 
         // Fetch and load the GeoJSON file
@@ -176,7 +197,7 @@
             .then(response => response.json())
             .then(data => {
                 geojsonData = data;  // Store the fetched GeoJSON data
-                populateDropdowns(); // Populate region dropdown after loading data
+                populateDropdowns(); // Populate dropdowns after loading data
 
                 // Add the GeoJSON layer to the map
                 geojsonLayer = L.geoJSON(geojsonData, {
@@ -211,50 +232,6 @@
             })
             .catch(error => console.error('Error loading GeoJSON:', error));
 
-        // Function to populate community areas based on selected region
-        function updateCommunityAreas(selectedRegion) {
-            communityFilter.innerHTML = '<option value="">Select Community Area</option>';
-            neighborhoodFilter.innerHTML = '<option value="">Select Neighborhood</option>';
-            neighborhoodFilter.disabled = true;
-
-            const communities = new Set();
-            geojsonData.features.forEach(feature => {
-                if (feature.properties.region === selectedRegion) {
-                    communities.add(feature.properties.community_area);
-                }
-            });
-
-            communities.forEach(community => {
-                const option = document.createElement('option');
-                option.value = community;
-                option.textContent = community;
-                communityFilter.appendChild(option);
-            });
-
-            communityFilter.disabled = communities.size > 0;
-        }
-
-        // Function to populate neighborhoods based on selected community area
-        function updateNeighborhoods(selectedCommunity) {
-            neighborhoodFilter.innerHTML = '<option value="">Select Neighborhood</option>';
-
-            const neighborhoods = new Set();
-            geojsonData.features.forEach(feature => {
-                if (feature.properties.community_area === selectedCommunity) {
-                    neighborhoods.add(feature.properties.neighborhood);
-                }
-            });
-
-            neighborhoods.forEach(neighborhood => {
-                const option = document.createElement('option');
-                option.value = neighborhood;
-                option.textContent = neighborhood;
-                neighborhoodFilter.appendChild(option);
-            });
-
-            neighborhoodFilter.disabled = neighborhoods.size > 0;
-        }
-
         // Function to filter the GeoJSON layer
         function filterGeoJSON() {
             const selectedRegion = regionFilter.value;
@@ -275,14 +252,59 @@
             geojsonLayer.addData(filteredData); // Re-add filtered data
         }
 
-        // Event listeners for filtering
+        // Function to update community areas based on selected region
+        function updateCommunityAreas() {
+            const selectedRegion = regionFilter.value;
+
+            // Clear the community and neighborhood dropdowns
+            communityFilter.innerHTML = '<option value="">Select Community Area</option>';
+            neighborhoodFilter.innerHTML = '<option value="">Select Neighborhood</option>';
+
+            const communities = new Set();
+            geojsonData.features.forEach(feature => {
+                if (!selectedRegion || feature.properties.region === selectedRegion) {
+                    communities.add(feature.properties.community_area);
+                }
+            });
+
+            communities.forEach(community => {
+                const option = document.createElement('option');
+                option.value = community;
+                option.textContent = community;
+                communityFilter.appendChild(option);
+            });
+        }
+
+        // Function to update neighborhoods based on selected community area
+        function updateNeighborhoods() {
+            const selectedCommunity = communityFilter.value;
+
+            // Clear the neighborhood dropdown
+            neighborhoodFilter.innerHTML = '<option value="">Select Neighborhood</option>';
+
+            const neighborhoods = new Set();
+            geojsonData.features.forEach(feature => {
+                if (!selectedCommunity || feature.properties.community_area === selectedCommunity) {
+                    neighborhoods.add(feature.properties.neighborhood);
+                }
+            });
+
+            neighborhoods.forEach(neighborhood => {
+                const option = document.createElement('option');
+                option.value = neighborhood;
+                option.textContent = neighborhood;
+                neighborhoodFilter.appendChild(option);
+            });
+        }
+
+        // Event listeners for dropdown changes
         regionFilter.addEventListener('change', () => {
-            updateCommunityAreas(regionFilter.value); // Update community areas when region changes
+            updateCommunityAreas();
             filterGeoJSON(); // Filter map data
         });
 
         communityFilter.addEventListener('change', () => {
-            updateNeighborhoods(communityFilter.value); // Update neighborhoods when community area changes
+            updateNeighborhoods();
             filterGeoJSON(); // Filter map data
         });
 
