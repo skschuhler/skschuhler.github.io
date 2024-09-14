@@ -58,10 +58,10 @@
                         }
                     } */
                     onEachFeature: function (feature, layer) {
-                      if (feature.properties && feature.properties.neigh) {
+                      if (feature.properties && feature.properties.neighborhood) {
                           layer.bindPopup(
-                              "<b>Neighborhood:</b> " + feature.properties.neigh +
-                              "<br><b>Community Area:</b> " + feature.properties.com_area +
+                              "<b>Neighborhood:</b> " + feature.properties.neighborhood +
+                              "<br><b>Community Area:</b> " + feature.properties.community_area +
                               "<br><b>Region:</b> " + feature.properties.region
                           );
                       }
