@@ -7,6 +7,8 @@
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Chroma.js for color manipulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
 
     <style>
         /* Basic style to fill the full screen with the map */
@@ -24,20 +26,8 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <!-- Script for loading the GeoJSON file and rendering the map with custom colors -->
+    <!-- Script for loading the GeoJSON file and rendering the map with controlled color scales -->
     <script>
-        // Function to generate color shades (lighter or darker)
-        function shadeColor(color, percent) {
-            var num = parseInt(color.slice(1), 16),
-                amt = Math.round(2.55 * percent),
-                R = (num >> 16) + amt,
-                G = (num >> 8 & 0x00FF) + amt,
-                B = (num & 0x0000FF) + amt;
-            return "#" + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + 
-                          (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 + 
-                          (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
-        }
-
         // Base colors for each region
         const regionColors = {
             "Far North Side": "#FF0000",   // Red
@@ -51,27 +41,29 @@
         // Track community areas to assign unique shades within each region
         const communityAreaColors = {};
 
+        // Function to get a color scale for the community areas in a region
+        function getColorScale(region, numAreas) {
+            const baseColor = regionColors[region] || "#CCCCCC";  // Default to grey if no region color
+            // Create a scale between a light version and the base color (you can adjust these limits)
+            return chroma.scale([chroma(baseColor).brighten(1), baseColor]).mode('lab').colors(numAreas);
+        }
+
         // Function to get the color for a community area
         function getCommunityAreaColor(region, communityArea) {
             // Check if the region has already been assigned a color
             if (!communityAreaColors[region]) {
-                communityAreaColors[region] = {};
+                // Get the number of community areas in the region and generate a color scale
+                const numAreas = Object.keys(communityAreaColors[region] || {}).length + 1;
+                communityAreaColors[region] = getColorScale(region, numAreas);
             }
-            
+
             // If the community area already has a color, return it
             if (communityAreaColors[region][communityArea]) {
                 return communityAreaColors[region][communityArea];
             }
 
-            // Otherwise, assign a new shade based on how many community areas are already in the region
-            const regionBaseColor = regionColors[region] || "#CCCCCC";  // Default to grey if no region color
-            const areaCount = Object.keys(communityAreaColors[region]).length;
-
-            // Assign a shade that gets lighter for each new community area
-            const shadePercent = -10 * areaCount;  // Darker by 10% for each area (adjust to taste)
-            const newColor = shadeColor(regionBaseColor, shadePercent);
-
-            // Store the new color for this community area
+            // Assign a new color to the community area and return it
+            const newColor = communityAreaColors[region].pop();  // Pop the next color from the scale
             communityAreaColors[region][communityArea] = newColor;
 
             return newColor;
