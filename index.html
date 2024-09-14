@@ -18,9 +18,6 @@
     <!-- Leaflet.js -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <!-- Your GeoJSON -->
-    <script src="Boundaries - Neighborhoods.geojson"></script> 
-
     <script>
         // Initialize the map
         var map = L.map('map').setView([41.8781, -87.6298], 11); // Center of Chicago
@@ -31,7 +28,7 @@
         }).addTo(map);
 
         // Add the GeoJSON layer
-        fetch('chicago_neighborhoods.geojson')
+        fetch("Boundaries - Neighborhoods.geojson")
     .then(response => response.json())
     .then(geojsonData => {
       console.log(geojsonData); // Log the GeoJSON data to inspect it
