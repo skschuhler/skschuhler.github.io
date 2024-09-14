@@ -4,50 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chicago Neighborhoods Map</title>
-    <!-- Leaflet.js CSS -->
+
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <style>
+        /* Basic style to fill the full screen with the map */
         #map {
             height: 100vh;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+
+    <!-- The map will be rendered in this div -->
     <div id="map"></div>
 
-    <!-- Leaflet.js -->
+    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
+    <!-- Script for loading the GeoJSON file and rendering the map -->
     <script>
-        // Initialize the map
-        var map = L.map('map').setView([41.8781, -87.6298], 11); // Center of Chicago
-        
-        // Load and display the tile layer (e.g., OpenStreetMap)
+        // Initialize the map and set its view to the center of Chicago
+        var map = L.map('map').setView([41.8781, -87.6298], 11);
+
+        // Add OpenStreetMap tiles to the map
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Add the GeoJSON layer
-        fetch("Boundaries - Neighborhoods.geojson")
-    .then(response => response.json())
-    .then(geojsonData => {
-      console.log(geojsonData); // Log the GeoJSON data to inspect it
-        L.geoJSON(geojsonData, {
-            style: function (feature) {
-                return {color: '#3388ff'}; // Example color for each polygon
-            },
-            onEachFeature: function (feature, layer) {
-                // Bind a popup to each neighborhood
-                if (feature.properties && feature.properties.pri_neigh) {
-                    layer.bindPopup(
-                        "<b>Primary Neighborhood:</b> " + feature.properties.pri_neigh +
-                        "<br><b>Secondary Neighborhood:</b> " + feature.properties.sec_neigh
-                    );
-                }
-            }
-        }).addTo(map);
-    });
+        // Fetch and load the GeoJSON file
+        fetch('Boundaries - Neighborhoods.geojson')
+            .then(response => response.json())
+            .then(geojsonData => {
+                // Add the GeoJSON layer to the map with custom styling and popups
+                var geojsonLayer = L.geoJSON(geojsonData, {
+                    style: function (feature) {
+                        return {
+                            color: "#3388ff", // Set the color for the neighborhood boundaries
+                            weight: 2
+                        };
+                    },
+                    onEachFeature: function (feature, layer) {
+                        // Bind popups to each neighborhood displaying the primary and secondary names
+                        if (feature.properties && feature.properties.pri_neigh) {
+                            layer.bindPopup(
+                                "<b>Primary Neighborhood:</b> " + feature.properties.pri_neigh +
+                                "<br><b>Secondary Neighborhood:</b> " + feature.properties.sec_neigh
+                            );
+                        }
+                    }
+                }).addTo(map);
 
+                // Adjust the map's view to fit the GeoJSON layer
+                map.fitBounds(geojsonLayer.getBounds());
+            })
+            .catch(error => console.error('Error loading GeoJSON:', error));
     </script>
 </body>
 </html>

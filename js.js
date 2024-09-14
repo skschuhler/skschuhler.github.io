@@ -1,3 +1,4 @@
+/*
 var marker = L.marker([41.8781, -87.6298]).addTo(map);
 marker.bindPopup("<b>Chicago!</b>").openPopup();
 
@@ -9,3 +10,4 @@ L.geoJSON(geojsonData, {
       layer.bindPopup(feature.properties.pri_neigh); // Assuming 'name' is a property
   }
 }).addTo(map);
+*/
