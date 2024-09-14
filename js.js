@@ -6,6 +6,6 @@ L.geoJSON(geojsonData, {
       return {color: 'blue'};
   },
   onEachFeature: function (feature, layer) {
-      layer.bindPopup(feature.properties.name); // Assuming 'name' is a property
+      layer.bindPopup(feature.properties.pri_neigh); // Assuming 'name' is a property
   }
 }).addTo(map);
