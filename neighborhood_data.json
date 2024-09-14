@@ -137,12 +137,12 @@
     {
         "neighborhood": "Belmont Gardens",
         "community_area": "Avondale, Hermosa, Logan Square",
-        "region": "North Side, Northwest Side"
+        "region": "North Side"
     },
     {
         "neighborhood": "Polish Village",
         "community_area": "Avondale, Irving Park",
-        "region": "North Side, Northwest Side"
+        "region": "North Side"
     },
     {
         "neighborhood": "Belmont Central",
@@ -637,7 +637,7 @@
     {
         "neighborhood": "Polish Downtown",
         "community_area": "Logan Square, West Town",
-        "region": "North Side, West Side"
+        "region": "North Side"
     },
     {
         "neighborhood": "New Eastside",
