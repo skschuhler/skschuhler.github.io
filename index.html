@@ -11,40 +11,65 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
 
     <style>
-        /* Basic style to fill the full screen with the map */
-        #map {
-            height: 90vh;
-            width: 100%;
-        }
-        /* Style the dropdowns */
-        .filter-container {
-            padding: 10px;
+        /* Flex container for sidebar and map */
+        .container {
             display: flex;
-            justify-content: space-around;
+            height: 100vh;
         }
+
+        /* Sidebar styles for the dropdowns */
+        .sidebar {
+            width: 300px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        /* Map styles */
+        #map {
+            flex-grow: 1;
+        }
+
+        /* Style the dropdowns */
         select {
-            padding: 5px;
+            padding: 10px;
             font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Headings for dropdowns */
+        .filter-heading {
+            font-weight: bold;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Dropdowns for filtering -->
-    <div class="filter-container">
-        <select id="regionFilter">
-            <option value="">Select Region</option>
-        </select>
-        <select id="communityFilter">
-            <option value="">Select Community Area</option>
-        </select>
-        <select id="neighborhoodFilter">
-            <option value="">Select Neighborhood</option>
-        </select>
-    </div>
+    <div class="container">
+        <!-- Sidebar for dropdowns -->
+        <div class="sidebar">
+            <div class="filter-heading">Filter by Region:</div>
+            <select id="regionFilter">
+                <option value="">Select Region</option>
+            </select>
 
-    <!-- The map will be rendered in this div -->
-    <div id="map"></div>
+            <div class="filter-heading">Filter by Community Area:</div>
+            <select id="communityFilter">
+                <option value="">Select Community Area</option>
+            </select>
+
+            <div class="filter-heading">Filter by Neighborhood:</div>
+            <select id="neighborhoodFilter">
+                <option value="">Select Neighborhood</option>
+            </select>
+        </div>
+
+        <!-- The map will be rendered in this div -->
+        <div id="map"></div>
+    </div>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -228,3 +253,9 @@
         }
 
         // Event listeners for filtering
+        regionFilter.addEventListener('change', filterGeoJSON);
+        communityFilter.addEventListener('change', filterGeoJSON);
+        neighborhoodFilter.addEventListener('change', filterGeoJSON);
+    </script>
+</body>
+</html>
