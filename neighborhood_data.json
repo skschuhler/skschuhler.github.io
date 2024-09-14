@@ -1,0 +1,1212 @@
+[
+    {
+        "neighborhood": "Albany Park",
+        "community_area": "Albany Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Mayfair",
+        "community_area": "Albany Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "North Mayfair",
+        "community_area": "Albany Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Ravenswood Manor",
+        "community_area": "Albany Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Archer Heights",
+        "community_area": "Archer Heights",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Armour Sqaure",
+        "community_area": "Armour Square",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Chinatown",
+        "community_area": "Armour Square",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Wentworth Gardens",
+        "community_area": "Armour Square",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Ashburn",
+        "community_area": "Ashburn",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Ashburn Estates",
+        "community_area": "Ashburn",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Beverly View",
+        "community_area": "Ashburn",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Crestline",
+        "community_area": "Ashburn",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Parkview",
+        "community_area": "Ashburn",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Scottsdale",
+        "community_area": "Ashburn",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Wrightwood",
+        "community_area": "Ashburn",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Auburn Gresham",
+        "community_area": "Auburn Gresham",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Gresham",
+        "community_area": "Auburn Gresham",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "North Austin",
+        "community_area": "Austin",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "South Austin",
+        "community_area": "Austin",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "The Island",
+        "community_area": "Austin",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Galewood ",
+        "community_area": "Austin ",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "West Humboldt Park",
+        "community_area": "Austin, Humboldt Park",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Avalon Park",
+        "community_area": "Avalon Park",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Marynook ",
+        "community_area": "Avalon Park",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Stony Island Park",
+        "community_area": "Avalon Park",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Avondale",
+        "community_area": "Avondale",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Jackowo",
+        "community_area": "Avondale",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Waclawowo",
+        "community_area": "Avondale",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Belmont Gardens",
+        "community_area": "Avondale, Hermosa, Logan Square",
+        "region": "North Side, Northwest Side"
+    },
+    {
+        "neighborhood": "Polish Village",
+        "community_area": "Avondale, Irving Park",
+        "region": "North Side, Northwest Side"
+    },
+    {
+        "neighborhood": "Belmont Central",
+        "community_area": "Belmont Cragin",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Cragin",
+        "community_area": "Belmont Cragin",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Hanson Park",
+        "community_area": "Belmont Cragin",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Brickyard",
+        "community_area": "Belmont Craigin",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "East Beverly",
+        "community_area": "Beverly",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "West Beverly",
+        "community_area": "Beverly",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Bridgeport",
+        "community_area": "Bridgeport",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Brighton Park",
+        "community_area": "Brighton Park",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Burnside",
+        "community_area": "Burnside",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Calumet Heights",
+        "community_area": "Calumet Heights",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Pill Hill",
+        "community_area": "Calumet Heights",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Chatham",
+        "community_area": "Chatham",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "East Chatham",
+        "community_area": "Chatham",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "West Chatham",
+        "community_area": "Chatham",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "West Chesterfield",
+        "community_area": "Chatham, Roseland",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Lithuanian Plaza",
+        "community_area": "Chicago Lawn",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Marquette Park",
+        "community_area": "Chicago Lawn",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Chrysler Village",
+        "community_area": "Clearing",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Clearing East",
+        "community_area": "Clearing",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Clearing West",
+        "community_area": "Clearing",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Bronzeville",
+        "community_area": "Douglas",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Dearborn Homes",
+        "community_area": "Douglas",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Groveland Park",
+        "community_area": "Douglas",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Lake Meadows",
+        "community_area": "Douglas",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Prairie Shores",
+        "community_area": "Douglas",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "South Commons",
+        "community_area": "Douglas",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Stateway Gardens",
+        "community_area": "Douglas",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "The Gap",
+        "community_area": "Douglas",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Belmont Heights",
+        "community_area": "Dunning",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Belmont Terrace",
+        "community_area": "Dunning",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Dunning",
+        "community_area": "Dunning",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Irving Woods",
+        "community_area": "Dunning",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Schorsch Village",
+        "community_area": "Dunning",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "East Garfield Park",
+        "community_area": "East Garfield Park",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Fifth City",
+        "community_area": "East Garfield Park",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "East Side",
+        "community_area": "East Side",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Edgewater",
+        "community_area": "Edgewater",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Edgewater Beach",
+        "community_area": "Edgewater",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Edgewater Glen",
+        "community_area": "Edgewater",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Lakewood/Balmoral",
+        "community_area": "Edgewater",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Andersonville",
+        "community_area": "Edgewater ",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Edison Park",
+        "community_area": "Edison Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Englewood",
+        "community_area": "Englewood",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Hamilton Park",
+        "community_area": "Englewood",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Edgebrook",
+        "community_area": "Forest Glen",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Forest Glen",
+        "community_area": "Forest Glen",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Old Edgebrook",
+        "community_area": "Forest Glen",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "South Edgebrook",
+        "community_area": "Forest Glen",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Suaganash",
+        "community_area": "Forest Glen",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Wildwood",
+        "community_area": "Forest Glen",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Fuller Park",
+        "community_area": "Fuller Park",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Gage Park",
+        "community_area": "Gage Park",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Garfield Ridge",
+        "community_area": "Garfield Ridge",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "LeClaire Courts",
+        "community_area": "Garfield Ridge",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Sleepy Hollow",
+        "community_area": "Garfield Ridge",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Vittum Park",
+        "community_area": "Garfield Ridge",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Grand Boulevard",
+        "community_area": "Grand Boulevard",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Legends South (Robert Taylor Homes)",
+        "community_area": "Grand Boulevard",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Grand Crossing",
+        "community_area": "Greater Grand Crossing",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Greater Grand Crossing",
+        "community_area": "Greater Grand Crossing",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Park Manor",
+        "community_area": "Greater Grand Crossing",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Hegewisch",
+        "community_area": "Hegewisch",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Hermosa",
+        "community_area": "Hermosa",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Kelvyn Park",
+        "community_area": "Hermosa",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Humboldt Park",
+        "community_area": "Humboldt Park",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "East Hyde Park",
+        "community_area": "Hyde Park",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Hyde Park",
+        "community_area": "Hyde Park",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Avondale Gardens",
+        "community_area": "Irving Park",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Irving Park",
+        "community_area": "Irving Park",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Kilbourn Park",
+        "community_area": "Irving Park",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Merchant Park",
+        "community_area": "Irving Park",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Old Irving Park",
+        "community_area": "Irving Park",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "The Villa",
+        "community_area": "Irving Park",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Gladstone Park",
+        "community_area": "Jefferson Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Jefferson Park",
+        "community_area": "Jefferson Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Kenwood ",
+        "community_area": "Kenwood",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "North Kenwood",
+        "community_area": "Kenwood",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Lake View",
+        "community_area": "Lake View",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Lakeview (East)",
+        "community_area": "Lake View",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Lakeview (West)",
+        "community_area": "Lake View",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Northalsted \"Boystown\"",
+        "community_area": "Lake View",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Sheridan Station Corridor",
+        "community_area": "Lake View",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "South East Ravenswood",
+        "community_area": "Lake View",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Wrigleyville",
+        "community_area": "Lake View",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Lincoln Park",
+        "community_area": "Lincoln Park",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Old Town Triangle",
+        "community_area": "Lincoln Park",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Park West",
+        "community_area": "Lincoln Park",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Ranch Triangle",
+        "community_area": "Lincoln Park",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Sheffield Neighbors",
+        "community_area": "Lincoln Park",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "West DePaul",
+        "community_area": "Lincoln Park",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Wrightwood Neighbors",
+        "community_area": "Lincoln Park",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Bowmanville",
+        "community_area": "Lincoln Square",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Budlong Woods",
+        "community_area": "Lincoln Square",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Lincoln Square",
+        "community_area": "Lincoln Square",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Ravenswood",
+        "community_area": "Lincoln Square",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Ravenswood Gardens",
+        "community_area": "Lincoln Square",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Bucktown",
+        "community_area": "Logan Square",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Kosciuszko Park",
+        "community_area": "Logan Square",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Logan Square",
+        "community_area": "Logan Square",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Palmer Square",
+        "community_area": "Logan Square",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Polish Downtown",
+        "community_area": "Logan Square, West Town",
+        "region": "North Side, West Side"
+    },
+    {
+        "neighborhood": "East Pilsen",
+        "community_area": "Lower West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Heart of Chicago ",
+        "community_area": "Lower West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Lower West Side",
+        "community_area": "Lower West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Pilsen",
+        "community_area": "Lower West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "McKinley Park",
+        "community_area": "McKinley Park",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Montclare ",
+        "community_area": "Montclare",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Beverly Woods",
+        "community_area": "Morgan Park",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Kennedy Park",
+        "community_area": "Morgan Park",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Morgan Park",
+        "community_area": "Morgan Park",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "West Morgan Park",
+        "community_area": "Morgan Park",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Mount Greenwood",
+        "community_area": "Mount Greenwood",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Talley's Corner",
+        "community_area": "Mount Greenwood",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Cabrini-Green",
+        "community_area": "Near North Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Gold Coast",
+        "community_area": "Near North Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Goose Island",
+        "community_area": "Near North Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Magnificent Mile",
+        "community_area": "Near North Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Near North Side",
+        "community_area": "Near North Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Old Town",
+        "community_area": "Near North Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "River North",
+        "community_area": "Near North Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Streeterville",
+        "community_area": "Near North Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Central Station",
+        "community_area": "Near South Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Museum Campus",
+        "community_area": "Near South Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Prairie Avenue Historic District",
+        "community_area": "Near South Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Fulton River District",
+        "community_area": "Near West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Greektown",
+        "community_area": "Near West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Illinois Medical District",
+        "community_area": "Near West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Little Italy",
+        "community_area": "Near West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Near West Side",
+        "community_area": "Near West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Tri-Taylor",
+        "community_area": "Near West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "University Village",
+        "community_area": "Near West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "West Loop",
+        "community_area": "Near West Side",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Back of the Yards",
+        "community_area": "New City",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "Canaryville ",
+        "community_area": "New City",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "New City",
+        "community_area": "New City",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "North Center",
+        "community_area": "North Center",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Roscoe Village",
+        "community_area": "North Center",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "St. Ben's",
+        "community_area": "North Center",
+        "region": "North Side"
+    },
+    {
+        "neighborhood": "Douglas Park",
+        "community_area": "North Lawndale",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Homan Square",
+        "community_area": "North Lawndale",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "K-Town",
+        "community_area": "North Lawndale",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "North Lawndale",
+        "community_area": "North Lawndale",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Hollywood Park",
+        "community_area": "North Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "North Park",
+        "community_area": "North Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "River's Edge",
+        "community_area": "North Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Big Oaks",
+        "community_area": "Norwood Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Norwood Park East",
+        "community_area": "Norwood Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Norwood Park West",
+        "community_area": "Norwood Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Old Norwood",
+        "community_area": "Norwood Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Oriole Park",
+        "community_area": "Norwood Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Union Ridge",
+        "community_area": "Norwood Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "O'Hare",
+        "community_area": "O'Hare",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Schorsch Forest View",
+        "community_area": "O'Hare",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Oakland",
+        "community_area": "Oakland",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Portage Park",
+        "community_area": "Portage Park",
+        "region": "Northwest Side"
+    },
+    {
+        "neighborhood": "Cottage Grove Heights",
+        "community_area": "Pullman",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Pullman",
+        "community_area": "Pullman",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Golden Gate",
+        "community_area": "Riverdale",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Riverdale",
+        "community_area": "Riverdale",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Altgeld Gardens",
+        "community_area": "Riverdale ",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Loyola",
+        "community_area": "Roger's Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Rogers Park",
+        "community_area": "Rogers Park",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Fernwood",
+        "community_area": "Roseland",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Kensington",
+        "community_area": "Roseland",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Lilydale",
+        "community_area": "Roseland",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Princeton Park",
+        "community_area": "Roseland",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Roseland",
+        "community_area": "Roseland",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Rosemoor",
+        "community_area": "Roseland",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "South Chicago",
+        "community_area": "South Chicago",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "South Deering",
+        "community_area": "South Deering",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Little Village",
+        "community_area": "South Lawndale",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Marshall Square",
+        "community_area": "South Lawndale",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "South Lawndale",
+        "community_area": "South Lawndale",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Jackson Park Highlands",
+        "community_area": "South Shore",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "South Shore",
+        "community_area": "South Shore",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "New Eastside",
+        "community_area": "The Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Printer's Row",
+        "community_area": "The Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "South Loop",
+        "community_area": "The Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "The Loop",
+        "community_area": "The Loop",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Dearborn Park",
+        "community_area": "The Loop, Near South Side",
+        "region": "Central"
+    },
+    {
+        "neighborhood": "Buena Park",
+        "community_area": "Uptown",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Clarendon Park",
+        "community_area": "Uptown",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Margate Park",
+        "community_area": "Uptown",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "New Chinatown",
+        "community_area": "Uptown",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Sheridan Park",
+        "community_area": "Uptown",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Uptown",
+        "community_area": "Uptown",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Brainerd ",
+        "community_area": "Washington Heights",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Longwood Manor",
+        "community_area": "Washington Heights",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Washington Heights",
+        "community_area": "Washington Heights",
+        "region": "Far Southwest Side"
+    },
+    {
+        "neighborhood": "Washington Park",
+        "community_area": "Washington Park",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "West Elsdon",
+        "community_area": "West Elsdon",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "West Englewood",
+        "community_area": "West Englewood",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "West Garfield Park",
+        "community_area": "West Garfield Park",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Ford City",
+        "community_area": "West Lawn",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "West Lawn",
+        "community_area": "West Lawn",
+        "region": "Southwest Side"
+    },
+    {
+        "neighborhood": "West Pullman",
+        "community_area": "West Pullman",
+        "region": "Far Southeast Side"
+    },
+    {
+        "neighborhood": "Arcadia Terrace",
+        "community_area": "West Ridge",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Nortown",
+        "community_area": "West Ridge",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Peterson Park",
+        "community_area": "West Ridge",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "Rosehill",
+        "community_area": "West Ridge",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "West Ridge",
+        "community_area": "West Ridge",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "West Rogers Park",
+        "community_area": "West Ridge",
+        "region": "Far North Side"
+    },
+    {
+        "neighborhood": "East Village",
+        "community_area": "West Town",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Noble Square",
+        "community_area": "West Town",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Pulaski Park",
+        "community_area": "West Town",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "River West",
+        "community_area": "West Town",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Smith Park",
+        "community_area": "West Town",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Ukrainian Village",
+        "community_area": "West Town",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "West Town",
+        "community_area": "West Town",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "Wicker Park",
+        "community_area": "West Town",
+        "region": "West Side"
+    },
+    {
+        "neighborhood": "West Woodlawn",
+        "community_area": "Woodlawn",
+        "region": "South Side"
+    },
+    {
+        "neighborhood": "Woodlawn",
+        "community_area": "Woodlawn",
+        "region": "South Side"
+    }
+]

@@ -35,7 +35,8 @@
         }).addTo(map);
 
         // Fetch and load the GeoJSON file
-        fetch('Boundaries - Neighborhoods.geojson')
+        //fetch('Boundaries - Neighborhoods.geojson')
+        fetch('Updated_Boundaries_Neighborhoods.geojson')
             .then(response => response.json())
             .then(geojsonData => {
                 // Add the GeoJSON layer to the map with custom styling and popups
@@ -46,6 +47,7 @@
                             weight: 2
                         };
                     },
+                    /*
                     onEachFeature: function (feature, layer) {
                         // Bind popups to each neighborhood displaying the primary and secondary names
                         if (feature.properties && feature.properties.pri_neigh) {
@@ -54,7 +56,16 @@
                                 "<br><b>Secondary Neighborhood:</b> " + feature.properties.sec_neigh
                             );
                         }
-                    }
+                    } */
+                    onEachFeature: function (feature, layer) {
+                      if (feature.properties && feature.properties.neigh) {
+                          layer.bindPopup(
+                              "<b>Neighborhood:</b> " + feature.properties.neigh +
+                              "<br><b>Community Area:</b> " + feature.properties.com_area +
+                              "<br><b>Region:</b> " + feature.properties.region
+                          );
+                      }
+                  }
                 }).addTo(map);
 
                 // Adjust the map's view to fit the GeoJSON layer
