@@ -89,7 +89,7 @@
                 var geojsonLayer = L.geoJSON(geojsonData, {
                     style: function (feature) {
                         // Get the region from the feature properties
-                        const region = normalizeRegionName(feature.properties.region);
+                        const region = feature.properties.region;
 
                         // Check if the region exists in the regionColors object
                         if (regionColors[region]) {
