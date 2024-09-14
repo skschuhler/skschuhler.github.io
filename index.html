@@ -34,6 +34,7 @@
         fetch('chicago_neighborhoods.geojson')
     .then(response => response.json())
     .then(geojsonData => {
+      console.log(geojsonData); // Log the GeoJSON data to inspect it
         L.geoJSON(geojsonData, {
             style: function (feature) {
                 return {color: '#3388ff'}; // Example color for each polygon
