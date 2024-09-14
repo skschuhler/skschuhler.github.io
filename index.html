@@ -26,9 +26,9 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <!-- Script for loading the GeoJSON file and rendering the map with controlled color scales -->
+    <!-- Script for loading the GeoJSON file and rendering the map with community area shading -->
     <script>
-        // Base colors for each region (you can adjust these colors as needed)
+        // Base colors for each region (adjust as needed)
         const regionColors = {
             "Far North Side": "#FF6347",   // Tomato Red
             "Southwest Side": "#4682B4",   // Steel Blue
@@ -42,35 +42,52 @@
             "Near North Side": "#1E90FF"   // Dodger Blue
         };
 
+        // Function to normalize the region name (trim spaces)
+        function normalizeRegionName(region) {
+            return region.trim();
+        }
+
         // Track community areas to assign unique shades within each region
         const communityAreaColors = {};
 
         // Function to get a color scale for the community areas in a region
         function getColorScale(region, numAreas) {
-            const baseColor = regionColors[region] || "#CCCCCC";  // Default to grey if no region color
-            // Create a scale between a light version and the base color (you can adjust these limits)
-            return chroma.scale([chroma(baseColor).brighten(1), baseColor]).mode('lab').colors(numAreas);
+            const baseColor = regionColors[region];
+
+            // If a base color exists for the region, generate a scale, otherwise return undefined
+            if (baseColor) {
+                // Generate a color scale between a lighter and slightly darkened version of the base color
+                return chroma.scale([chroma(baseColor).brighten(0.5), chroma(baseColor).darken(0.5)])
+                    .mode('lab')
+                    .colors(numAreas);
+            }
+            return undefined;
         }
 
         // Function to get the color for a community area
         function getCommunityAreaColor(region, communityArea) {
-            // Check if the region has already been assigned a color
+            // Ensure that each region has a color scale assigned
             if (!communityAreaColors[region]) {
-                // Get the number of community areas in the region and generate a color scale
-                const numAreas = Object.keys(communityAreaColors[region] || {}).length + 1;
-                communityAreaColors[region] = getColorScale(region, numAreas);
+                const uniqueCommunityAreas = new Set();  // Use a Set to track unique community areas in the region
+
+                // Iterate through the GeoJSON data to count unique community areas in this region
+                geojsonData.features.forEach(feature => {
+                    if (normalizeRegionName(feature.properties.region) === region) {
+                        uniqueCommunityAreas.add(feature.properties.community_area);
+                    }
+                });
+
+                // Generate the color scale based on the number of community areas
+                communityAreaColors[region] = getColorScale(region, uniqueCommunityAreas.size);
             }
 
-            // If the community area already has a color, return it
-            if (communityAreaColors[region][communityArea]) {
-                return communityAreaColors[region][communityArea];
+            // Assign a new color from the color scale to the community area if not already assigned
+            if (!communityAreaColors[region][communityArea]) {
+                const newColor = communityAreaColors[region].pop();  // Pop the next color from the scale
+                communityAreaColors[region][communityArea] = newColor;
             }
 
-            // Assign a new color to the community area and return it
-            const newColor = communityAreaColors[region].pop();  // Pop the next color from the scale
-            communityAreaColors[region][communityArea] = newColor;
-
-            return newColor;
+            return communityAreaColors[region][communityArea];
         }
 
         // Initialize the map and set its view to the center of Chicago
@@ -81,30 +98,31 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
+        // Global variable to hold GeoJSON data
+        let geojsonData;
+
         // Fetch and load the GeoJSON file
         fetch('Updated_Boundaries_Neighborhoods.geojson')
             .then(response => response.json())
-            .then(geojsonData => {
-                // Add the GeoJSON layer to the map with base region colors (no shades)
+            .then(data => {
+                geojsonData = data;  // Store the fetched GeoJSON data
+
+                // Add the GeoJSON layer to the map with custom coloring based on region and community area
                 var geojsonLayer = L.geoJSON(geojsonData, {
                     style: function (feature) {
-                        // Get the region from the feature properties
-                        const region = feature.properties.region;
+                        // Get the community area and region from the feature properties
+                        const communityArea = feature.properties.community_area;
+                        const region = normalizeRegionName(feature.properties.region);
 
-                        // Check if the region exists in the regionColors object
-                        if (regionColors[region]) {
-                            const fillColor = regionColors[region];  // Use the base color for the region
-                            return {
-                                color: "#000",        // Boundary color (black)
-                                weight: 2,            // Boundary width
-                                fillColor: fillColor, // Neighborhood fill color based on region
-                                fillOpacity: 0.7      // Set fill opacity
-                            };
-                        } else {
-                            // Log the missing region for debugging
-                            console.log('No color found for region:', region);
-                            return {};  // Return an empty style (no color applied)
-                        }
+                        // Get the color based on the community area and region
+                        const fillColor = getCommunityAreaColor(region, communityArea);
+
+                        return {
+                            color: "#000",        // Boundary color (black)
+                            weight: 2,            // Boundary width
+                            fillColor: fillColor, // Neighborhood fill color based on community area
+                            fillOpacity: 0.7      // Set fill opacity
+                        };
                     },
                     onEachFeature: function (feature, layer) {
                         if (feature.properties && feature.properties.neighborhood) {
@@ -121,8 +139,6 @@
                 map.fitBounds(geojsonLayer.getBounds());
             })
             .catch(error => console.error('Error loading GeoJSON:', error));
-
-     
     </script>
 </body>
 </html>
