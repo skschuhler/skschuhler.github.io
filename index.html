@@ -31,11 +31,25 @@
         }).addTo(map);
 
         // Add the GeoJSON layer
-        fetch('path/to/your/chicago_neighborhoods.geojson')
-            .then(response => response.json())
-            .then(geojsonData => {
-                L.geoJSON(geojsonData).addTo(map);
-            });
+        fetch('chicago_neighborhoods.geojson')
+    .then(response => response.json())
+    .then(geojsonData => {
+        L.geoJSON(geojsonData, {
+            style: function (feature) {
+                return {color: '#3388ff'}; // Example color for each polygon
+            },
+            onEachFeature: function (feature, layer) {
+                // Bind a popup to each neighborhood
+                if (feature.properties && feature.properties.pri_neigh) {
+                    layer.bindPopup(
+                        "<b>Primary Neighborhood:</b> " + feature.properties.pri_neigh +
+                        "<br><b>Secondary Neighborhood:</b> " + feature.properties.sec_neigh
+                    );
+                }
+            }
+        }).addTo(map);
+    });
+
     </script>
 </body>
 </html>
