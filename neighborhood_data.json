@@ -1186,8 +1186,8 @@
     },
     {
         "neighborhood": "United Center",
-        "community_area": "Loop",
-        "region": "Central"
+        "community_area": "Near West Side",
+        "region": "West Side"
     },
     {
         "neighborhood": "Grant Park",
@@ -1196,8 +1196,8 @@
     },
     {
         "neighborhood": "Rush & Division",
-        "community_area": "Rush & Division",
-        "region": "Near North Side"
+        "community_area": "Near North Side",
+        "region": "Central"
     },
     {
         "neighborhood": "Millenium Park",
