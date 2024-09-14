@@ -13,12 +13,35 @@
     <style>
         /* Basic style to fill the full screen with the map */
         #map {
-            height: 100vh;
+            height: 90vh;
             width: 100%;
+        }
+        /* Style the dropdowns */
+        .filter-container {
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        select {
+            padding: 5px;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
+
+    <!-- Dropdowns for filtering -->
+    <div class="filter-container">
+        <select id="regionFilter">
+            <option value="">Select Region</option>
+        </select>
+        <select id="communityFilter">
+            <option value="">Select Community Area</option>
+        </select>
+        <select id="neighborhoodFilter">
+            <option value="">Select Neighborhood</option>
+        </select>
+    </div>
 
     <!-- The map will be rendered in this div -->
     <div id="map"></div>
@@ -26,7 +49,7 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <!-- Script for loading the GeoJSON file and rendering the map with community area shading -->
+    <!-- Script for loading the GeoJSON file, filtering, and rendering the map -->
     <script>
         // Base colors for each region (adjust as needed)
         const regionColors = {
@@ -100,15 +123,59 @@
 
         // Global variable to hold GeoJSON data
         let geojsonData;
+        let geojsonLayer;
+
+        // Dropdown elements
+        const regionFilter = document.getElementById('regionFilter');
+        const communityFilter = document.getElementById('communityFilter');
+        const neighborhoodFilter = document.getElementById('neighborhoodFilter');
+
+        // Populate the dropdowns based on the GeoJSON data
+        function populateDropdowns() {
+            const regions = new Set();
+            const communities = new Set();
+            const neighborhoods = new Set();
+
+            geojsonData.features.forEach(feature => {
+                regions.add(feature.properties.region);
+                communities.add(feature.properties.community_area);
+                neighborhoods.add(feature.properties.neighborhood);
+            });
+
+            // Populate region filter
+            regions.forEach(region => {
+                const option = document.createElement('option');
+                option.value = region;
+                option.textContent = region;
+                regionFilter.appendChild(option);
+            });
+
+            // Populate community area filter
+            communities.forEach(community => {
+                const option = document.createElement('option');
+                option.value = community;
+                option.textContent = community;
+                communityFilter.appendChild(option);
+            });
+
+            // Populate neighborhood filter
+            neighborhoods.forEach(neighborhood => {
+                const option = document.createElement('option');
+                option.value = neighborhood;
+                option.textContent = neighborhood;
+                neighborhoodFilter.appendChild(option);
+            });
+        }
 
         // Fetch and load the GeoJSON file
         fetch('Updated_Boundaries_Neighborhoods.geojson')
             .then(response => response.json())
             .then(data => {
                 geojsonData = data;  // Store the fetched GeoJSON data
+                populateDropdowns(); // Populate dropdowns after loading data
 
-                // Add the GeoJSON layer to the map with custom coloring based on region and community area
-                var geojsonLayer = L.geoJSON(geojsonData, {
+                // Add the GeoJSON layer to the map
+                geojsonLayer = L.geoJSON(geojsonData, {
                     style: function (feature) {
                         // Get the community area and region from the feature properties
                         const communityArea = feature.properties.community_area;
@@ -139,6 +206,25 @@
                 map.fitBounds(geojsonLayer.getBounds());
             })
             .catch(error => console.error('Error loading GeoJSON:', error));
-    </script>
-</body>
-</html>
+
+        // Function to filter the GeoJSON layer
+        function filterGeoJSON() {
+            const selectedRegion = regionFilter.value;
+            const selectedCommunity = communityFilter.value;
+            const selectedNeighborhood = neighborhoodFilter.value;
+
+            geojsonLayer.clearLayers(); // Clear the current layer
+
+            // Filter and re-add the GeoJSON data
+            const filteredData = geojsonData.features.filter(feature => {
+                const regionMatch = !selectedRegion || feature.properties.region === selectedRegion;
+                const communityMatch = !selectedCommunity || feature.properties.community_area === selectedCommunity;
+                const neighborhoodMatch = !selectedNeighborhood || feature.properties.neighborhood === selectedNeighborhood;
+
+                return regionMatch && communityMatch && neighborhoodMatch;
+            });
+
+            geojsonLayer.addData(filteredData); // Re-add filtered data
+        }
+
+        // Event listeners for filtering
