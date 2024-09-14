@@ -82,46 +82,45 @@
         }).addTo(map);
 
         // Fetch and load the GeoJSON file
-        // Fetch and load the GeoJSON file
-fetch('Updated_Boundaries_Neighborhoods.geojson')
-    .then(response => response.json())
-    .then(geojsonData => {
-        // Add the GeoJSON layer to the map with base region colors (no shades)
-        var geojsonLayer = L.geoJSON(geojsonData, {
-            style: function (feature) {
-                // Get the region from the feature properties
-                const region = normalizeRegionName(feature.properties.region);
+        fetch('Updated_Boundaries_Neighborhoods.geojson')
+            .then(response => response.json())
+            .then(geojsonData => {
+                // Add the GeoJSON layer to the map with base region colors (no shades)
+                var geojsonLayer = L.geoJSON(geojsonData, {
+                    style: function (feature) {
+                        // Get the region from the feature properties
+                        const region = normalizeRegionName(feature.properties.region);
 
-                // Check if the region exists in the regionColors object
-                if (regionColors[region]) {
-                    const fillColor = regionColors[region];  // Use the base color for the region
-                    return {
-                        color: "#000",        // Boundary color (black)
-                        weight: 2,            // Boundary width
-                        fillColor: fillColor, // Neighborhood fill color based on region
-                        fillOpacity: 0.7      // Set fill opacity
-                    };
-                } else {
-                    // Log the missing region for debugging
-                    console.log('No color found for region:', region);
-                    return {};  // Return an empty style (no color applied)
-                }
-            },
-            onEachFeature: function (feature, layer) {
-                if (feature.properties && feature.properties.neighborhood) {
-                    layer.bindPopup(
-                        "<b>Neighborhood:</b> " + feature.properties.neighborhood +
-                        "<br><b>Community Area:</b> " + feature.properties.community_area +
-                        "<br><b>Region:</b> " + feature.properties.region
-                    );
-                }
-            }
-        }).addTo(map);
+                        // Check if the region exists in the regionColors object
+                        if (regionColors[region]) {
+                            const fillColor = regionColors[region];  // Use the base color for the region
+                            return {
+                                color: "#000",        // Boundary color (black)
+                                weight: 2,            // Boundary width
+                                fillColor: fillColor, // Neighborhood fill color based on region
+                                fillOpacity: 0.7      // Set fill opacity
+                            };
+                        } else {
+                            // Log the missing region for debugging
+                            console.log('No color found for region:', region);
+                            return {};  // Return an empty style (no color applied)
+                        }
+                    },
+                    onEachFeature: function (feature, layer) {
+                        if (feature.properties && feature.properties.neighborhood) {
+                            layer.bindPopup(
+                                "<b>Neighborhood:</b> " + feature.properties.neighborhood +
+                                "<br><b>Community Area:</b> " + feature.properties.community_area +
+                                "<br><b>Region:</b> " + feature.properties.region
+                            );
+                        }
+                    }
+                }).addTo(map);
 
-        // Adjust the map's view to fit the GeoJSON layer
-        map.fitBounds(geojsonLayer.getBounds());
-    })
-    .catch(error => console.error('Error loading GeoJSON:', error));
+                // Adjust the map's view to fit the GeoJSON layer
+                map.fitBounds(geojsonLayer.getBounds());
+            })
+            .catch(error => console.error('Error loading GeoJSON:', error));
 
      
     </script>
