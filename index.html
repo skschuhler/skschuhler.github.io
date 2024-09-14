@@ -24,8 +24,59 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <!-- Script for loading the GeoJSON file and rendering the map -->
+    <!-- Script for loading the GeoJSON file and rendering the map with custom colors -->
     <script>
+        // Function to generate color shades (lighter or darker)
+        function shadeColor(color, percent) {
+            var num = parseInt(color.slice(1), 16),
+                amt = Math.round(2.55 * percent),
+                R = (num >> 16) + amt,
+                G = (num >> 8 & 0x00FF) + amt,
+                B = (num & 0x0000FF) + amt;
+            return "#" + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + 
+                          (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 + 
+                          (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
+        }
+
+        // Base colors for each region
+        const regionColors = {
+            "Far North Side": "#FF0000",   // Red
+            "North Side": "#0000FF",       // Blue
+            "Central": "#008000",          // Green
+            "West Side": "#FFFF00",        // Yellow
+            "South Side": "#800080",       // Purple
+            "Far South Side": "#FF4500"    // Orange Red
+        };
+
+        // Track community areas to assign unique shades within each region
+        const communityAreaColors = {};
+
+        // Function to get the color for a community area
+        function getCommunityAreaColor(region, communityArea) {
+            // Check if the region has already been assigned a color
+            if (!communityAreaColors[region]) {
+                communityAreaColors[region] = {};
+            }
+            
+            // If the community area already has a color, return it
+            if (communityAreaColors[region][communityArea]) {
+                return communityAreaColors[region][communityArea];
+            }
+
+            // Otherwise, assign a new shade based on how many community areas are already in the region
+            const regionBaseColor = regionColors[region] || "#CCCCCC";  // Default to grey if no region color
+            const areaCount = Object.keys(communityAreaColors[region]).length;
+
+            // Assign a shade that gets lighter for each new community area
+            const shadePercent = -10 * areaCount;  // Darker by 10% for each area (adjust to taste)
+            const newColor = shadeColor(regionBaseColor, shadePercent);
+
+            // Store the new color for this community area
+            communityAreaColors[region][communityArea] = newColor;
+
+            return newColor;
+        }
+
         // Initialize the map and set its view to the center of Chicago
         var map = L.map('map').setView([41.8781, -87.6298], 11);
 
@@ -35,37 +86,35 @@
         }).addTo(map);
 
         // Fetch and load the GeoJSON file
-        //fetch('Boundaries - Neighborhoods.geojson')
         fetch('Updated_Boundaries_Neighborhoods.geojson')
             .then(response => response.json())
             .then(geojsonData => {
-                // Add the GeoJSON layer to the map with custom styling and popups
+                // Add the GeoJSON layer to the map with custom coloring based on region and community area
                 var geojsonLayer = L.geoJSON(geojsonData, {
                     style: function (feature) {
+                        // Get the community area and region from the feature properties
+                        const communityArea = feature.properties.community_area;
+                        const region = feature.properties.region;
+
+                        // Get the color based on the community area and region
+                        const fillColor = getCommunityAreaColor(region, communityArea);
+
                         return {
-                            color: "#FF0000", // Set the color for the neighborhood boundaries
-                            weight: 2
+                            color: "#000",        // Boundary color (black)
+                            weight: 2,            // Boundary width
+                            fillColor: fillColor, // Neighborhood fill color based on region and community area
+                            fillOpacity: 0.7      // Set fill opacity
                         };
                     },
-                    /*
                     onEachFeature: function (feature, layer) {
-                        // Bind popups to each neighborhood displaying the primary and secondary names
-                        if (feature.properties && feature.properties.pri_neigh) {
+                        if (feature.properties && feature.properties.neighborhood) {
                             layer.bindPopup(
-                                "<b>Primary Neighborhood:</b> " + feature.properties.pri_neigh +
-                                "<br><b>Secondary Neighborhood:</b> " + feature.properties.sec_neigh
+                                "<b>Neighborhood:</b> " + feature.properties.neighborhood +
+                                "<br><b>Community Area:</b> " + feature.properties.community_area +
+                                "<br><b>Region:</b> " + feature.properties.region
                             );
                         }
-                    } */
-                    onEachFeature: function (feature, layer) {
-                      if (feature.properties && feature.properties.neighborhood) {
-                          layer.bindPopup(
-                              "<b>Neighborhood:</b> " + feature.properties.neighborhood +
-                              "<br><b>Community Area:</b> " + feature.properties.community_area +
-                              "<br><b>Region:</b> " + feature.properties.region
-                          );
-                      }
-                  }
+                    }
                 }).addTo(map);
 
                 // Adjust the map's view to fit the GeoJSON layer
